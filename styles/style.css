@@ -3,3 +3,25 @@
 @import url(./a11y.css);
 @import url(./theme.css);
 @import url(./base.css);
+
+/* 공통 스타일 */
+body{
+  background-color: var(--primary-color);
+  font-size: 20px;
+}
+
+
+@media (min-width: 320px){
+  body{
+    background-color: var(--green);
+    font-size: 40px;
+  }  
+}
+
+/* 중단점 - 769px 이상(desktop UI) */
+@media (min-width: 769px){
+  body{
+    background-color: var(--blue);
+    font-size: 60px;
+  }  
+}
