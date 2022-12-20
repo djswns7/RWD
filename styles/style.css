@@ -7,10 +7,9 @@
 /* 모든 디바이스 (All Device) */
 
 /* 공통 아이콘 (Font Awesome) */
-.far,.fas{
+.far, .fas {
   margin-right: var(--spacing-xs);
 }
-
 
 /* 공통 헤더 */
 .appHeader {
@@ -198,12 +197,10 @@ input[type="search"] {
 
 /* 공통 새소식 */
 .news {
-  /* background: yellow; */
   grid-area: news;
 }
 
 .news__date{
-  background-color: lime;
   display: block;
   margin-top: var(--spacing-base);
   text-align: right;
@@ -211,9 +208,49 @@ input[type="search"] {
 
 /* 공통 게시판 */
 .board {
-  /* background: lightsalmon; */
   grid-area: board;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
 }
+
+.board__title{
+  flex: 1 1 auto;
+  
+}
+.board__list{
+  order: 1;
+  flex:1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+.board__item{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+
+.board__link{
+  flex: 0 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 6.25em);
+
+  word-wrap:break-word; 
+  -webkit-line-clamp: 1;
+}
+.board__date{
+  flex: 0 0 auto;
+  width: 6.25em;
+  text-align: right;
+}
+.board__more{
+  padding-top: var(--spacing-sm);
+}
+
 
 /* 공통 인기 사이트 */
 .favorite {
@@ -402,7 +439,6 @@ input[type="search"] {
 
   /* 데스크탑 메인 콘텐츠 */
   .appMain {
-    border: 5px solid red;
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
